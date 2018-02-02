@@ -50,7 +50,7 @@ After the setup is complete, this wallet doesn't have to run 24/7 and will be th
 
 9. Go to `Tools` -> `Open Masternode Configuration File` and add a line in the newly opened `masternode.conf` file. The file will contain an example that is commented out, but based on the above values, I would add this line in:
    ```
-   MN1 45.76.33.125:30888 3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 6782efab3a76fa557370ec3b9c13bf0d0df3d4df63adc018e1dd90e1c8da088e 1
+   MN1 45.76.33.125:5500 3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 6782efab3a76fa557370ec3b9c13bf0d0df3d4df63adc018e1dd90e1c8da088e 1
    ```
    Where `45.76.33.125` is the external IP of the masternode server that will provide services to the network.
    
@@ -62,9 +62,12 @@ After the setup is complete, this wallet doesn't have to run 24/7 and will be th
 At this point, we are going to configure our remote Masternode server.
 
 
+------
+
+
 ## **Hot** MasterNode VPS Setup(Part 2)
 
-This is will run 24/7 and provide services to the network via TCP port 30888 for which it will be rewarded with coins. It will run with an empty wallet reducing the risk of loosing the funds in the event of an attack.
+This is will run 24/7 and provide services to the network via TCP port 5500 for which it will be rewarded with coins. It will run with an empty wallet reducing the risk of loosing the funds in the event of an attack.
 
 1. Get a VPS server from a provider like Vultr, DigitalOcean, Linode, Amazon AWS, etc. 
 
