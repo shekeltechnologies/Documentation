@@ -89,6 +89,10 @@ apt-get update -y
 apt-get upgrade -y
 apt-get install wget nano unrar unzip -y
 apt-get install libboost-all-dev -y
+apt-get install software-properties-common -y
+add-apt-repository ppa:bitcoin/bitcoin -y
+apt-get update
+apt-get install libdb4.8-dev libdb4.8++-dev -y
 ```
 
 3. Configure swap to avoid running out of memory:
