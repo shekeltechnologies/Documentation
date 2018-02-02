@@ -2,6 +2,10 @@
 
 > This is a community contributed guide. Feel free to suggest improvements via Issues or opening Pull Requests. Thank you!
 
+
+**!!! This guide is for setting up a MasterNode using the new Shekel ZeroCoin wallet and chain !!!**
+
+
 ### **Cold** Wallet Setup(Part 1)
 
 This is the wallet where the MasterNode collateral of 25000 JEW coins will have to be transferred and stored.
