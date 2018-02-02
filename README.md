@@ -1,6 +1,6 @@
 ## Shekel Open Source Documentation
 
-Hi and thank you for stopping by. Here are the guide we currently have available:
+Hi and thank you for stopping by. Here are the currently available guides:
 
  * [MasterNode Hot Qt Wallet + Cold Linux Setup Guide](guides/MasterNode_Setup_Cold_Hot_Linux.md)
 
