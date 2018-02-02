@@ -11,9 +11,9 @@
 This is the wallet where the MasterNode collateral of 25000 JEW coins will have to be transferred and stored.
 After the setup is complete, this wallet doesn't have to run 24/7 and will be the one receiving the rewards.
 
-1. Install and open the Shekel-Qt wallet on your machine.
+### 1. Install and open the Shekel-Qt wallet on your machine.
 
-2. Create a receiving address for the Masternode collateral funds.
+### 2. Create a receiving address for the Masternode collateral funds.
 
    Go to File -> Receiving addresses...
    
@@ -21,14 +21,14 @@ After the setup is complete, this wallet doesn't have to run 24/7 and will be th
    
    ![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel_new_address.png "Receiving Address")
 
-3. Select the row of the newly added address and click **Copy** to store the destination address in the clipboard.
-4. Send exactly 25000 JEW coins to the address you just copied. Double check you've got the correct address before transferring the funds.
-5. After sending, you can verify the balance in the Transactions tab. This can take a few minutes to be confirmed by the network.
-6. Open the debug console of the wallet in order to type a few commands. 
+### 3. Select the row of the newly added address and click **Copy** to store the destination address in the clipboard.
+### 4. Send exactly 25000 JEW coins to the address you just copied. Double check you've got the correct address before transferring the funds.
+### 5. After sending, you can verify the balance in the Transactions tab. This can take a few minutes to be confirmed by the network.
+### 6. Open the debug console of the wallet in order to type a few commands. 
 
    Go to `Tools` -> `Debug console`
 
-7. Run the following command: `masternode genkey`
+### 7. Run the following command: `masternode genkey`
 
    ![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel_console_genkey.png "Wallet Debug Console genkey")
 
@@ -38,7 +38,7 @@ After the setup is complete, this wallet doesn't have to run 24/7 and will be th
    ```
    We will use this later on both cold and hot wallets.
 
-8. Run `masternode outputs` command to retrieve the transaction ID of the collateral transfer.
+### 8. Run `masternode outputs` command to retrieve the transaction ID of the collateral transfer.
 
    You should see an output that looks like this:
    ```
@@ -52,7 +52,7 @@ After the setup is complete, this wallet doesn't have to run 24/7 and will be th
 
    Both `txhash` and `outputidx` will be used in the next step. `outputidx` can be `0` or `1`, both are valid values
 
-9. Go to `Tools` -> `Open Masternode Configuration File` and add a line in the newly opened `masternode.conf` file. The file will contain an example that is commented out, but based on the above values, I would add this line in:
+### 9. Go to `Tools` -> `Open Masternode Configuration File` and add a line in the newly opened `masternode.conf` file. The file will contain an example that is commented out, but based on the above values, I would add this line in:
    ```
    MN1 45.76.33.125:5500 3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 6782efab3a76fa557370ec3b9c13bf0d0df3d4df63adc018e1dd90e1c8da088e 1
    ```
@@ -60,8 +60,8 @@ After the setup is complete, this wallet doesn't have to run 24/7 and will be th
    
    If you want to control multiple hot wallets from this cold wallet, you will need to repeat the previous 2-10 steps. The `masternode.conf` file will contain an entry for each masternode that will be added to the network.
 
-10. Restart the wallet to pick up the `masternode.conf` changes.
-11. Go to Masternodes tab and check if your newly added masternode is listed.
+### 10. Restart the wallet to pick up the `masternode.conf` changes.
+### 11. Go to Masternodes tab and check if your newly added masternode is listed.
 
 At this point, we are going to configure our remote Masternode server.
 
@@ -75,7 +75,7 @@ Requires details from (Part 1).
 
 This is will run 24/7 and provide services to the network via TCP port 5500 for which it will be rewarded with coins. It will run with an empty wallet reducing the risk of loosing the funds in the event of an attack.
 
-1. Get a VPS server from a provider like Vultr, DigitalOcean, Linode, Amazon AWS, etc. 
+### 1. Get a VPS server from a provider like Vultr, DigitalOcean, Linode, Amazon AWS, etc. 
 
 Requirements:
  * Linux VPS (Ubuntu 14.04, 64 bit)
@@ -83,7 +83,7 @@ Requirements:
  * Recommended at least 1GB of RAM 
 
 
-2. SSH into the server and:
+### 2. SSH into the server and:
 
 Update and Install new packages (as user `root`) by running these commands one by one and ensuring success:
 ```
@@ -96,7 +96,7 @@ apt-get update
 apt-get install libdb4.8-dev libdb4.8++-dev -y
 ```
 
-3. Configure swap to avoid running out of memory:
+### 3. Configure swap to avoid running out of memory:
 ```
 fallocate -l 1500M /mnt/1500MB.swap
 dd if=/dev/zero of=/mnt/1500MB.swap bs=1024 count=1572864
@@ -106,7 +106,7 @@ chmod 600 /mnt/1500MB.swap
 echo '/mnt/1500MB.swap  none  swap  sw 0  0' >> /etc/fstab
 ```
 
-4. Allow the MasterNode p2p communication port through the OS firewall:
+### 4. Allow the MasterNode p2p communication port through the OS firewall:
 ```
 ufw allow 5500/tcp
 ufw logging on
@@ -115,7 +115,7 @@ ufw --force enable
 
 If you are running the MasterNode server in Amazon AWS or another place where additional firewalls are in place, you need to allow incoming connections on port 5500/tcp
 
-5. Create a regular user and switch to in in order to run the wallet:
+### 5. Create a regular user and switch to in in order to run the wallet:
 ```
 adduser mnguru
 su mnguru
@@ -124,7 +124,7 @@ cd ~
 
 For security reasons, do not run the MasterNode wallet under the superuser `root`.
 
-6. Install Shekel (as user `mnguru`). Always download the latest [release available](https://github.com/shekeltechnologies/JewNew/releases), unpack it
+### 6. Install the Shekel CLI wallet(as user `mnguru`). Always download the latest [release available](https://github.com/shekeltechnologies/JewNew/releases), unpack it
 ```
 wget https://github.com/shekeltechnologies/JewNew/releases/download/1.2.1.0/Shekel-linux.rar
 unrar x Shekel-linux.rar
@@ -136,7 +136,7 @@ You'll get a start error like `Error: To use shekeld, or the -server option to s
 
 The service will only start for a second and create the initial data directory(~/.shekel/).
 
-7. Edit the MasterNode main wallet configuration file:
+### 7. Edit the MasterNode main wallet configuration file:
 nano ~/.shekel/shekel.conf
 
 Enter this data and change accordingly:
@@ -159,12 +159,12 @@ The IP address(`45.76.33.125` in this example) will be different for you. Use th
 Same goes for the `masternodeprivkey` value. You need the key returned by the `masternode genkey` command executed in the Cold Wallet(Part 1). The exact same key needs to be used for the masternode entry in the `masternode.conf` file of your Cold Wallet(Part 1)
 
 
-8. Start the service with:
+### 8. Start the service with:
 ```
 ./shekeld
 ```
 
-9. Wait until is synced with the blockchain network:
+### 9. Wait until is synced with the blockchain network:
 Run this command every few mins until the block count stopped increasing fast.
 ```
 ./shekel-cli getinfo
@@ -174,7 +174,7 @@ Run this command every few mins until the block count stopped increasing fast.
 
 ## Enable the Masternode
 
-1. Go back to the local(cold) wallet and open `Tools` > `Debug console`.
+### 1. Go back to the local(cold) wallet and open `Tools` > `Debug console`.
 
 Type this command to see all the MasterNodes loaded from the `masternode.conf` file with their current status:
 ```
@@ -190,7 +190,7 @@ startmasternode alias false MN1
 In this ^ case, the alias of my MasterNode was MN1, in your case, it might be different.
 
 
-## Verify that the MasterNode is enabled and contributing to the network.
+### 2. Verify that the MasterNode is enabled and contributing to the network.
 
 Give it a few minutes and go to the Linux VPS console() and check the status of the masternode with this command:
 ```
