@@ -88,6 +88,7 @@ Update and Install new packages (as user `root`)
 apt-get update -y
 apt-get upgrade -y
 apt-get install wget nano unrar unzip -y
+apt-get install libboost-all-dev -y
 ```
 
 3. Configure swap to avoid running out of memory:
