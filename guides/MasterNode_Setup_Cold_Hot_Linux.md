@@ -130,7 +130,8 @@ rm Shekel-linux.rar
 chmod +x shekel-cli shekeld
 ./shekeld
 ```
-This will start the service only for a second and create the initial data directory(~/.shekel/).
+You'll get a start error like `Error: To use shekeld, or the -server option to shekel-qt, you must set an rpcpassword in the configuration file`. It's expected because we haven't created the config file yet.
+The service will only start for a second and create the initial data directory(~/.shekel/).
 
 7. Edit the MasterNode main wallet configuration file:
 nano ~/.shekel/shekel.conf
