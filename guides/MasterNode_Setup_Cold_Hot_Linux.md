@@ -83,13 +83,12 @@ Requirements:
 
 2. SSH into the server and:
 
-Update and Install new packages (as user `root`)
+Update and Install new packages (as user `root`) by running these commands one by one and ensuring success:
 ```
 apt-get update -y
 apt-get upgrade -y
 apt-get install wget nano unrar unzip -y
-apt-get install libboost-all-dev -y
-apt-get install software-properties-common -y
+apt-get install libboost-all-dev libevent-dev software-properties-common -y
 add-apt-repository ppa:bitcoin/bitcoin -y
 apt-get update
 apt-get install libdb4.8-dev libdb4.8++-dev -y
