@@ -71,6 +71,8 @@ At this point, we are going to configure our remote Masternode server.
 
 ## **Hot** MasterNode VPS Setup(Part 2)
 
+Requires details from (Part 1).
+
 This is will run 24/7 and provide services to the network via TCP port 5500 for which it will be rewarded with coins. It will run with an empty wallet reducing the risk of loosing the funds in the event of an attack.
 
 1. Get a VPS server from a provider like Vultr, DigitalOcean, Linode, Amazon AWS, etc. 
@@ -131,6 +133,7 @@ chmod +x shekel-cli shekeld
 ./shekeld
 ```
 You'll get a start error like `Error: To use shekeld, or the -server option to shekel-qt, you must set an rpcpassword in the configuration file`. It's expected because we haven't created the config file yet.
+
 The service will only start for a second and create the initial data directory(~/.shekel/).
 
 7. Edit the MasterNode main wallet configuration file:
@@ -153,7 +156,7 @@ masternodeprivkey=3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg
 Exit the editor by CTRL+X and hit Y to commit your changes.
 
 The IP address(`45.76.33.125` in this example) will be different for you. Use the `ifconfig` command to find out your IP address, normally the address of the `eth0` interface.
-Same goes for the value needed for `masternodeprivkey`. You need the key generated during the cold wallet setup here.
+Same goes for the `masternodeprivkey` value. You need the key returned by the `masternode genkey` command executed in the Cold Wallet(Part 1). The exact same key needs to be used for the masternode entry in the `masternode.conf` file of your Cold Wallet(Part 1)
 
 
 8. Start the service with:
