@@ -74,19 +74,19 @@ At this point, we are going to configure our remote Masternode server.
 
 Requires details from (Part 1).
 
-This is will run 24/7 and provide services to the network via TCP port 5500 for which it will be rewarded with coins. It will run with an empty wallet reducing the risk of loosing the funds in the event of an attack.
+This will run 24/7 and provide services to the network via TCP port 5500 for which it will be rewarded with coins. It will run with an empty wallet reducing the risk of loosing the funds in the event of an attack.
 
 ### 1. Get a VPS server from a provider like Vultr, DigitalOcean, Linode, Amazon AWS, etc. 
 
 Requirements:
  * Linux VPS (Ubuntu 14.04, 64 bit)
- * Static IPv4 Address
+ * Dedicated Public IP Address
  * Recommended at least 1GB of RAM 
 
 
-### 2. SSH into the server and:
+### 2. Login via SSH into the server and type the following command in the console as root:
 
-Update and Install new packages (as user `root`) by running these commands one by one and ensuring success:
+Update and Install new packages by running these commands one by one:
 ```
 apt-get update -y
 apt-get upgrade -y
@@ -114,33 +114,29 @@ ufw logging on
 ufw --force enable
 ```
 
-If you are running the MasterNode server in Amazon AWS or another place where additional firewalls are in place, you need to allow incoming connections on port 5500/tcp
+If you are running the MasterNode server in Amazon AWS or another place where additional firewalls are in place, you need to allow incoming connections on port 5500/TCP
 
-### 5. Create a regular user and switch to in in order to run the wallet:
-```
-adduser mnguru
-su mnguru
-cd ~
-```
 
-For security reasons, do not run the MasterNode wallet under the superuser `root`.
 
-### 6. Install the Shekel CLI wallet(as user `mnguru`). Always download the latest [release available](https://github.com/shekeltechnologies/JewNew/releases), unpack it
+### 5. Install the Shekel CLI wallet. Always download the latest [release available](https://github.com/shekeltechnologies/JewNew/releases), unpack it
 ```
 wget https://github.com/shekeltechnologies/JewNew/releases/download/1.2.1.0/Shekel-linux.rar
 unrar x Shekel-linux.rar
 rm Shekel-linux.rar
 chmod +x shekel-cli shekeld
-./shekeld
+mv shekel-cli shekeld /usr/local/bin/
+shekeld
 ```
 You'll get a start error like `Error: To use shekeld, or the -server option to shekel-qt, you must set an rpcpassword in the configuration file`. It's expected because we haven't created the config file yet.
 
-The service will only start for a second and create the initial data directory(~/.shekel/).
+The service will only start for a second and create the initial data directory(`~/.shekel/`).
 
-### 7. Edit the MasterNode main wallet configuration file:
-nano ~/.shekel/shekel.conf
+### 6. Edit the MasterNode main wallet configuration file:
+```
+nano /root/.shekel/shekel.conf
+```
 
-Enter this data and change accordingly:
+Enter this wallet configuration data and change accordingly:
 ```
 rpcuser=<alphanumeric_rpc_username>
 rpcpassword=<alphanumeric_rpc_password>
@@ -175,15 +171,15 @@ The IP address(`45.76.33.125` in this example) will be different for you. Use th
 Same goes for the `masternodeprivkey` value. You need the key returned by the `masternode genkey` command executed in the Cold Wallet(Part 1). The exact same key needs to be used for the masternode entry in the `masternode.conf` file of your Cold Wallet(Part 1)
 
 
-### 8. Start the service with:
+### 7. Start the service with:
 ```
-./shekeld
+shekeld
 ```
 
-### 9. Wait until is synced with the blockchain network:
+### 8. Wait until is synced with the blockchain network:
 Run this command every few mins until the block count stopped increasing fast.
 ```
-./shekel-cli getinfo
+shekel-cli getinfo
 ``` 
 
 
@@ -210,24 +206,29 @@ In this ^ case, the alias of my MasterNode was MN1, in your case, it might be di
 
 Give it a few minutes and go to the Linux VPS console() and check the status of the masternode with this command:
 ```
-./shekel-cli masternode status
+shekel-cli masternode status
 ```
 
-If you see status `Masternode successfully started`, you are golden, go hug someone.
+If you see status `Masternode successfully started`, you've done it, congratulations. Go hug someone now :)
 It will take a few hours until the first rewards start coming in.
 
 Instead, if you get status `Masternode not found in the list of available masternodes`, you need a bit more patience. Distributed systems take a bit of time to reach consensus. Restarting the wallets and retrying the start has been reported to help by community members. This is how you restart the Linux wallet from the CLI:
 ```
-./shekel-cli stop
+shekel-cli stop
 # wait 30 seconds or so for the wallet to gracefully stop and then start it again
-./shekeld
+shekeld
 ```
 Rerun the `startmasternode` command again in the Qt (Cold) wallet.
 
-The masternode debug log (`~/.shekel/debug.log`) will contain this line on a successful activation:
+The masternode debug log (`/root/.shekel/debug.log`) will contain this line on a successful activation:
 ```
 2018-02-02 02:07:12 CActiveMasternode::EnableHotColdMasterNode() - Enabled! You may shut down the cold daemon.
 ```
+You can watch the log as it's being written by using this command:
+```
+tail -f /root/.shekel/debug.log
+```
+Stop watching the log by pressing CTRL+C
 
 As the log entry says, your MasterNode is up and running and the hot wallet that holds the collateral can be closed without impacting the operation of the MasterNode in the network.
 
