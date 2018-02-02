@@ -150,11 +150,26 @@ server=1
 daemon=1
 maxconnections=250
 masternode=1
+externalip=<ip_address_here>:5500
+masternodeaddr=<ip_address_here>:5500
+masternodeprivkey=<the_colw_wallet_genkey_value_here>
+```
+Exit the editor by CTRL+X and hit Y to commit your changes.
+
+This is a real example, based on the `genkey` obtained in the Cold(Part 1) wallet section:
+```
+rpcuser=shekelrpcuser
+rpcpassword=someSUPERsecurePASSWORD3746375620
+rpcport=5501
+listen=1
+server=1
+daemon=1
+maxconnections=250
+masternode=1
 externalip=45.76.33.125:5500
 masternodeaddr=45.76.33.125:5500
 masternodeprivkey=3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg
 ```
-Exit the editor by CTRL+X and hit Y to commit your changes.
 
 The IP address(`45.76.33.125` in this example) will be different for you. Use the `ifconfig` command to find out your IP address, normally the address of the `eth0` interface.
 Same goes for the `masternodeprivkey` value. You need the key returned by the `masternode genkey` command executed in the Cold Wallet(Part 1). The exact same key needs to be used for the masternode entry in the `masternode.conf` file of your Cold Wallet(Part 1)
