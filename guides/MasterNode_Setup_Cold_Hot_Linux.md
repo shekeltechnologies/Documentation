@@ -50,7 +50,7 @@ After the setup is complete, this wallet doesn't have to run 24/7 and will be th
    ]
    ```
 
-   Both `txhash` and `outputidx` will be used in the next step.
+   Both `txhash` and `outputidx` will be used in the next step. `outputidx` can be `0` or `1`, both are valid values
 
 9. Go to `Tools` -> `Open Masternode Configuration File` and add a line in the newly opened `masternode.conf` file. The file will contain an example that is commented out, but based on the above values, I would add this line in:
    ```
