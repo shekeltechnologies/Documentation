@@ -23,12 +23,13 @@ After the setup is complete, this wallet doesn't have to run 24/7 and will be th
 
 ### 3. Select the row of the newly added address and click **Copy** to store the destination address in the clipboard.
 ### 4. Send exactly 25000 JEW coins to the address you just copied. Double check you've got the correct address before transferring the funds.
-### 5. After sending, you can verify the balance in the Transactions tab. This can take a few minutes to be confirmed by the network.
-### 6. Open the debug console of the wallet in order to type a few commands. 
+     After sending, you can verify the balance in the Transactions tab. This can take a few minutes to be confirmed by the network.
+
+### 5. Open the debug console of the wallet in order to type a few commands. 
 
    Go to `Tools` -> `Debug console`
 
-### 7. Run the following command: `masternode genkey`
+### 6. Run the following command: `masternode genkey`
 
    ![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel_console_genkey.png "Wallet Debug Console genkey")
 
@@ -38,7 +39,7 @@ After the setup is complete, this wallet doesn't have to run 24/7 and will be th
    ```
    We will use this later on both cold and hot wallets.
 
-### 8. Run `masternode outputs` command to retrieve the transaction ID of the collateral transfer.
+### 7. Run `masternode outputs` command to retrieve the transaction ID of the collateral transfer.
 
    You should see an output that looks like this:
    ```
@@ -52,7 +53,7 @@ After the setup is complete, this wallet doesn't have to run 24/7 and will be th
 
    Both `txhash` and `outputidx` will be used in the next step. `outputidx` can be `0` or `1`, both are valid values
 
-### 9. Go to `Tools` -> `Open Masternode Configuration File` and add a line in the newly opened `masternode.conf` file. The file will contain an example that is commented out, but based on the above values, I would add this line in:
+### 8. Go to `Tools` -> `Open Masternode Configuration File` and add a line in the newly opened `masternode.conf` file. The file will contain an example that is commented out, but based on the above values, I would add this line in:
    ```
    MN1 45.76.33.125:5500 3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 6782efab3a76fa557370ec3b9c13bf0d0df3d4df63adc018e1dd90e1c8da088e 1
    ```
@@ -60,8 +61,8 @@ After the setup is complete, this wallet doesn't have to run 24/7 and will be th
    
    If you want to control multiple hot wallets from this cold wallet, you will need to repeat the previous 2-10 steps. The `masternode.conf` file will contain an entry for each masternode that will be added to the network.
 
-### 10. Restart the wallet to pick up the `masternode.conf` changes.
-### 11. Go to Masternodes tab and check if your newly added masternode is listed.
+### 9. Restart the wallet to pick up the `masternode.conf` changes.
+### 10. Go to Masternodes tab and check if your newly added masternode is listed.
 
 At this point, we are going to configure our remote Masternode server.
 
