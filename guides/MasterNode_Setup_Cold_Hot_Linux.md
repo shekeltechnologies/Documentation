@@ -72,6 +72,127 @@ This is will run 24/7 and provide services to the network via TCP port 5500 for 
 1. Get a VPS server from a provider like Vultr, DigitalOcean, Linode, Amazon AWS, etc. 
 
 Requirements:
- * Linux VPS (Ubuntu, Debian or similar)
+ * Linux VPS (Ubuntu 14.04, 64 bit)
  * Static IPv4 Address
  * Recommended at least 1GB of RAM 
+
+
+2. SSH into the server and:
+
+Update and Install new packages (as user `root`)
+```
+apt-get update -y
+apt-get upgrade -y
+apt-get install wget nano unrar unzip -y
+```
+
+3. Configure swap to avoid running out of memory:
+```
+fallocate -l 1500M /mnt/1500MB.swap
+dd if=/dev/zero of=/mnt/1500MB.swap bs=1024 count=1572864
+mkswap /mnt/1500MB.swap
+swapon /mnt/1500MB.swap
+chmod 600 /mnt/1500MB.swap
+echo '/mnt/1500MB.swap  none  swap  sw 0  0' >> /etc/fstab
+```
+
+4. Allow the MasterNode p2p communication port through the OS firewall:
+```
+ufw allow 5500/tcp
+ufw logging on
+ufw --force enable
+```
+
+If you are running the MasterNode server in Amazon AWS or another place where additional firewalls are in place, you need to allow incoming connections on port 5500/tcp
+
+5. Create a regular user and switch to in in order to run the wallet:
+```
+adduser mnguru
+su mnguru
+cd ~
+```
+
+For security reasons, do not run the MasterNode wallet under the superuser `root`.
+
+6. Install Shekel (as user `mnguru`). Always download the latest [release available](https://github.com/shekeltechnologies/JewNew/releases), unpack it
+```
+wget https://github.com/shekeltechnologies/JewNew/releases/download/1.2.1.0/Shekel-linux.rar
+unrar x Shekel-linux.rar
+rm Shekel-linux.rar
+chmod +x shekel-cli shekeld
+./shekeld
+```
+This will start the service only for a second and create the initial data directory(~/.shekel/).
+
+7. Edit the MasterNode main wallet configuration file:
+nano ~/.shekel/shekel.conf
+
+Enter this data and change accordingly:
+```
+rpcuser=<alphanumeric_rpc_username>
+rpcpassword=<alphanumeric_rpc_password>
+rpcport=5501
+listen=1
+server=1
+daemon=1
+maxconnections=250
+masternode=1
+externalip=45.76.33.125:5500
+masternodeaddr=45.76.33.125:5500
+masternodeprivkey=3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg
+```
+Exit the editor by CTRL+X and hit Y to commit your changes.
+
+The IP address(`45.76.33.125` in this example) will be different for you. Use the `ifconfig` command to find out your IP address, normally the address of the `eth0` interface.
+Same goes for the value needed for `masternodeprivkey`. You need the key generated during the cold wallet setup here.
+
+
+8. Start the service with:
+```
+./shekeld
+```
+
+9. Wait until is synced with the blockchain network:
+Run this command every few mins until the block count stopped increasing fast.
+```
+./shekel-cli getinfo
+``` 
+
+
+
+## Enable the Masternode
+
+1. Go back to the local(cold) wallet and open `Tools` > `Debug console`.
+
+Type this command to see all the MasterNodes loaded from the `masternode.conf` file with their current status:
+```
+masternode list-conf
+```
+
+You should now see the newly added MasterNode with a status of `MISSING`.
+
+Run the following command, in order to enable it:
+```
+startmasternode alias false MN1
+```
+In this ^ case, the alias of my MasterNode was MN1, in your case, it might be different.
+
+
+## Verify that the MasterNode is enabled and contributing to the network.
+
+Give it a few minutes and go to the Linux VPS console() and check the status of the masternode with this command:
+```
+./shekel-cli masternode status
+```
+
+If you see status `Masternode successfully started`, you are golden, go hug someone.
+It will take a few hours until the first rewards start coming in.
+
+The masternode debug log (~/.shekel/debug.log) should also contain this line on a successful activation:
+```
+2018-02-02 02:07:12 CActiveMasternode::EnableHotColdMasterNode() - Enabled! You may shut down the cold daemon.
+```
+
+As the log entry says, your MasterNode is up and running and the hot wallet that holds the collateral can be closed without impacting the operation of the MasterNode in the network.
+
+Cheers !
