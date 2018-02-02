@@ -201,11 +201,21 @@ Give it a few minutes and go to the Linux VPS console() and check the status of 
 If you see status `Masternode successfully started`, you are golden, go hug someone.
 It will take a few hours until the first rewards start coming in.
 
-The masternode debug log (~/.shekel/debug.log) should also contain this line on a successful activation:
+Instead, if you get status `Masternode not found in the list of available masternodes`, you need a bit more patience. Distributed systems take a bit of time to reach consensus. Restarting the wallets and retrying the start has been reported to help by community members. This is how you restart the Linux wallet from the CLI:
+```
+./shekel-cli stop
+# wait 30 seconds or so for the wallet to gracefully stop and then start it again
+./shekeld
+```
+Rerun the `startmasternode` command again in the Qt (Cold) wallet.
+
+The masternode debug log (`~/.shekel/debug.log`) will contain this line on a successful activation:
 ```
 2018-02-02 02:07:12 CActiveMasternode::EnableHotColdMasterNode() - Enabled! You may shut down the cold daemon.
 ```
 
 As the log entry says, your MasterNode is up and running and the hot wallet that holds the collateral can be closed without impacting the operation of the MasterNode in the network.
+
+You should now be able to see your MasterNode(s) on this web page: [http://shekel.mn.zone](http://shekel.mn.zone)
 
 Cheers !
