@@ -206,7 +206,7 @@ In this ^ case, the alias of my MasterNode was MN1, in your case, it might be di
 
 ### 2. Verify that the MasterNode is enabled and contributing to the network.
 
-Give it a few minutes and go to the Linux VPS console() and check the status of the masternode with this command:
+Give it a few minutes and go to the Linux VPS console and check the status of the masternode with this command:
 ```
 shekel-cli masternode status
 ```
