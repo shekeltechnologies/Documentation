@@ -152,7 +152,7 @@ externalip=<ip_address_here>:5500
 masternodeaddr=<ip_address_here>:5500
 masternodeprivkey=<the_colw_wallet_genkey_value_here>
 ```
-Exit the editor by CTRL+X and hit Y to commit your changes.
+Exit the editor by CTRL+X and hit Y + ENTER to commit your changes.
 
 This is a real example, based on the `genkey` obtained in the Cold(Part 1) wallet section:
 ```
