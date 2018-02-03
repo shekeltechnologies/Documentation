@@ -86,7 +86,7 @@ Requirements:
 
 ### 2. Login via SSH into the server and type the following command in the console as root:
 
-If you are using Windows, PuTTy is a very good SSH client that you can use to connect to a remote Linux server.
+If you are using Windows, [PuTTY](https://putty.org) is a very good SSH client that you can use to connect to a remote Linux server.
 
 Update and Install new packages by running these commands one by one:
 ```
