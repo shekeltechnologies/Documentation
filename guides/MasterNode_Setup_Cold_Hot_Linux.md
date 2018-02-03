@@ -1,4 +1,4 @@
-## SHEKEL Cold - Hot(Linux) wallet MasterNode setup guide
+## SHEKEL Cold + Hot wallet MasterNode setup guide
 
 > This is a community contributed guide. Feel free to suggest improvements via Issues or opening Pull Requests. Thank you!
 
@@ -6,7 +6,7 @@
 **!!! This guide is for setting up a MasterNode using the new Shekel ZeroCoin wallet and chain !!!**
 
 
-### **Cold** Wallet Setup(Part 1)
+### **Cold** Wallet Setup(Part 1) using the Qt GUI wallet on Windows, OSX, etc
 
 This is the wallet where the MasterNode collateral of 25000 JEW coins will have to be transferred and stored.
 After the setup is complete, this wallet doesn't have to run 24/7 and will be the one receiving the rewards.
@@ -70,7 +70,7 @@ At this point, we are going to configure our remote Masternode server.
 ------
 
 
-## **Hot** MasterNode VPS Setup(Part 2)
+## **Hot** MasterNode VPS Setup(Part 2) with Linux CLI only wallet
 
 Requires details from (Part 1).
 
