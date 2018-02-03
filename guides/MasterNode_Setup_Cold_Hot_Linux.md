@@ -61,7 +61,7 @@ After the setup is complete, this wallet doesn't have to run 24/7 and will be th
    
    If you want to control multiple hot wallets from this cold wallet, you will need to repeat the previous 2-10 steps. The `masternode.conf` file will contain an entry for each masternode that will be added to the network.
 
-### 9. Restart the wallet to pick up the `masternode.conf` changes.
+### 9. Restart the Qt wallet to pick up the `masternode.conf` changes.
 ### 10. Go to Masternodes tab and check if your newly added masternode is listed.
 
 At this point, we are going to configure our remote Masternode server.
