@@ -79,7 +79,7 @@ This will run 24/7 and provide services to the network via TCP port 5500 for whi
 ### 1. Get a VPS server from a provider like Vultr, DigitalOcean, Linode, Amazon AWS, etc. 
 
 Requirements:
- * Linux VPS (Ubuntu 14.04, 64 bit)
+ * Linux VPS (**Ubuntu 14.04**, 64 bit) For newer Ubuntu versions, you have to install the wallet from sources at the moment
  * Dedicated Public IP Address
  * Recommended at least 1GB of RAM 
 
