@@ -140,15 +140,13 @@ shekeld
 
 For **Ubuntu 16.04**
 ```
-wget http://files.gyservers.com/index.php/s/Ob6jeLQE8zj226E/download 
-mv download shekel-linux-16.04.zip
-unzip shekel-linux-16.04.zip
-rm shekel-linux-16.04.zip
-cd Ubuntu\ 1604/
+wget https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-Ubuntu16.04-1.3.0.zip
+mv download shekel-Ubuntu16.04-1.3.0.zip
+unzip shekel-Ubuntu16.04-1.3.0.zip
+rm shekel-Ubuntu16.04-1.3.0.zip
 chmod +x shekel-cli shekeld
 mv shekel-cli shekeld /usr/local/bin/
 cd ..
-rm -rf Ubuntu\ 1604/
 shekeld
 ```
 
