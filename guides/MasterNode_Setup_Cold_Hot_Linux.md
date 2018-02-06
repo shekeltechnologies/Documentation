@@ -111,6 +111,8 @@ echo '/mnt/1500MB.swap  none  swap  sw 0  0' >> /etc/fstab
 
 ### 4. Allow the MasterNode p2p communication port through the OS firewall:
 ```
+ufw allow 22/tcp
+ufw limit 22/tcp
 ufw allow 5500/tcp
 ufw logging on
 ufw --force enable
