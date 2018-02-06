@@ -124,9 +124,10 @@ If you are running the MasterNode server in Amazon AWS or another place where ad
 
 For **Ubuntu 14.04**
 ```
-wget https://github.com/shekeltechnologies/JewNew/files/1697479/shekel-linux-14.04.zip
-unzip shekel-linux-14.04.zip
-rm shekel-linux-14.04.zip
+apt-get install libzmq3 -y
+wget https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-linux-1.3.0.zip
+unzip shekel-linux-1.3.0.zip
+rm shekel-linux-1.3.0.zip
 chmod +x shekel-cli shekeld
 mv shekel-cli shekeld /usr/local/bin/
 shekeld
