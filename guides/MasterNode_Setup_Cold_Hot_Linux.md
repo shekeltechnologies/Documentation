@@ -129,7 +129,7 @@ shekel-cli stop
 
 For **Ubuntu 14.04**
 ```
-apt-get install libzmq3 -y
+apt-get install libzmq3 libminiupnpc-dev -y
 wget https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-linux-1.3.0.zip
 unzip shekel-linux-1.3.0.zip
 rm shekel-linux-1.3.0.zip
