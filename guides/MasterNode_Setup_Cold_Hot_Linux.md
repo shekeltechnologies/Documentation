@@ -122,6 +122,11 @@ If you are running the MasterNode server in Amazon AWS or another place where ad
 
 ### 5. Install the Shekel CLI wallet. Always download the latest [release available](https://github.com/shekeltechnologies/JewNew/releases), unpack it
 
+If you are already running a `shekeld` on your server and want to upgrade it, stop the current one with:
+```
+shekel-cli stop
+```
+
 For **Ubuntu 14.04**
 ```
 apt-get install libzmq3 -y
