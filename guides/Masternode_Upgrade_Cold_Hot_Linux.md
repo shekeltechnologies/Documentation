@@ -55,7 +55,7 @@ mv shekel-cli shekeld /usr/local/bin/
 ```
 apt-get update -y
 apt-get upgrade -y
-apt-get install libzmq3 libminiupnpc-dev -y
+apt-get install libzmq3-dev libminiupnpc-dev -y
 https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-Ubuntu16.04-1.3.0.zip
 unzip shekel-Ubuntu16.04-1.3.0.zip
 rm shekel-Ubuntu16.04-1.3.0.zip
