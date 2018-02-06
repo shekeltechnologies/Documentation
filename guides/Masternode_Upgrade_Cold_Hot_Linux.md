@@ -38,6 +38,11 @@ If you are using Windows, [PuTTY](https://putty.org) is a very good SSH client t
 ```
 shekel-cli stop
 ```
+Run the following command until the shekeld process disappears.
+```
+ps aux | grep shekeld
+```
+
 
 ### 3. Upgrade the Shekel CLI wallet. Always download the latest [release available](https://github.com/shekeltechnologies/JewNew/releases), unpack it
 #### For Ubuntu 14.04 (see below for 16.04)
@@ -107,7 +112,13 @@ It will take a few hours until the first rewards start coming in.
 Instead, if you get status `Masternode not found in the list of available masternodes`, you need a bit more patience. Distributed systems take a bit of time to reach consensus. Restarting the wallets and retrying the start has been reported to help by community members. This is how you restart the Linux wallet from the CLI:
 ```
 shekel-cli stop
-# wait 30 seconds or so for the wallet to gracefully stop and then start it again
+```
+Run the following command until the shekeld process disappears.
+```
+ps aux | grep shekeld
+```
+Then run the daemon.
+```
 shekeld
 ```
 Rerun the `startmasternode` command again in the Qt (Cold) wallet.
