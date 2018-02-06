@@ -79,7 +79,7 @@ This will run 24/7 and provide services to the network via TCP port 5500 for whi
 ### 1. Get a VPS server from a provider like Vultr, DigitalOcean, Linode, Amazon AWS, etc. 
 
 Requirements:
- * Linux VPS (**Ubuntu 14.04**, 64 bit) For newer Ubuntu versions, you have to install the wallet from sources at the moment
+ * Linux VPS (**Ubuntu 14.04** 64 bit and **Ubuntu 16.04** 64 bit) - Choose the correct version for your OS from the release page
  * Dedicated Public IP Address
  * Recommended at least 1GB of RAM 
 
@@ -121,14 +121,31 @@ If you are running the MasterNode server in Amazon AWS or another place where ad
 
 
 ### 5. Install the Shekel CLI wallet. Always download the latest [release available](https://github.com/shekeltechnologies/JewNew/releases), unpack it
+
+Ubuntu 14.04
 ```
-wget https://github.com/shekeltechnologies/JewNew/releases/download/1.2.1.0/Shekel-linux.rar
-unrar x Shekel-linux.rar
-rm Shekel-linux.rar
+wget https://github.com/shekeltechnologies/JewNew/files/1697479/shekel-linux-14.04.zip
+unzip shekel-linux-14.04.zip
+rm shekel-linux-14.04.zip
 chmod +x shekel-cli shekeld
 mv shekel-cli shekeld /usr/local/bin/
 shekeld
 ```
+
+Ubuntu 16.04
+```
+wget http://files.gyservers.com/index.php/s/Ob6jeLQE8zj226E/download 
+mv download shekel-linux-16.04.zip
+unzip shekel-linux-16.04.zip
+rm shekel-linux-16.04.zip
+cd Ubuntu\ 1604/
+chmod +x shekel-cli shekeld
+mv shekel-cli shekeld /usr/local/bin/
+cd ..
+rm -rf Ubuntu\ 1604/
+shekeld
+```
+
 You'll get a start error like `Error: To use shekeld, or the -server option to shekel-qt, you must set an rpcpassword in the configuration file`. It's expected because we haven't created the config file yet.
 
 The service will only start for a second and create the initial data directory(`~/.shekel/`).
