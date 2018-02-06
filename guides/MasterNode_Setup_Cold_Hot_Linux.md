@@ -122,7 +122,7 @@ If you are running the MasterNode server in Amazon AWS or another place where ad
 
 ### 5. Install the Shekel CLI wallet. Always download the latest [release available](https://github.com/shekeltechnologies/JewNew/releases), unpack it
 
-Ubuntu 14.04
+For **Ubuntu 14.04**
 ```
 wget https://github.com/shekeltechnologies/JewNew/files/1697479/shekel-linux-14.04.zip
 unzip shekel-linux-14.04.zip
@@ -132,7 +132,7 @@ mv shekel-cli shekeld /usr/local/bin/
 shekeld
 ```
 
-Ubuntu 16.04
+For **Ubuntu 16.04**
 ```
 wget http://files.gyservers.com/index.php/s/Ob6jeLQE8zj226E/download 
 mv download shekel-linux-16.04.zip
