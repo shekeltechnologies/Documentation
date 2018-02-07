@@ -128,6 +128,11 @@ If you are already running a `shekeld` on your server and want to upgrade it, st
 ```
 shekel-cli stop
 ```
+Run the following command until the shekeld process disappears.
+```
+ps aux | grep shekeld
+```
+
 
 For **Ubuntu 14.04**
 ```
@@ -142,6 +147,7 @@ shekeld
 
 For **Ubuntu 16.04**
 ```
+apt-get install libzmq3-dev libminiupnpc-dev -y
 wget https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-Ubuntu16.04-1.3.0.zip
 mv download shekel-Ubuntu16.04-1.3.0.zip
 unzip shekel-Ubuntu16.04-1.3.0.zip
@@ -240,7 +246,13 @@ It will take a few hours until the first rewards start coming in.
 Instead, if you get status `Masternode not found in the list of available masternodes`, you need a bit more patience. Distributed systems take a bit of time to reach consensus. Restarting the wallets and retrying the start has been reported to help by community members. This is how you restart the Linux wallet from the CLI:
 ```
 shekel-cli stop
-# wait 30 seconds or so for the wallet to gracefully stop and then start it again
+```
+Run the following command until the shekeld process disappears.
+```
+ps aux | grep shekeld
+```
+Then run the daemon.
+```
 shekeld
 ```
 Rerun the `startmasternode` command again in the Qt (Cold) wallet.
