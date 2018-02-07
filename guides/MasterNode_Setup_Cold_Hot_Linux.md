@@ -115,7 +115,6 @@ ufw allow 22/tcp
 ufw limit 22/tcp
 ufw allow 5500/tcp
 ufw logging on
-ufw --force enable
 ```
 
 If you are running the MasterNode server in Amazon AWS or another place where additional firewalls are in place, you need to allow incoming connections on port 5500/TCP
