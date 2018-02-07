@@ -50,7 +50,7 @@ ps aux | grep shekeld
 apt-get update -y
 apt-get upgrade -y
 apt-get install libzmq3 libminiupnpc-dev -y
-https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-linux-1.3.0.zip
+wget https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-linux-1.3.0.zip
 unzip shekel-linux-1.3.0.zip
 rm shekel-linux-1.3.0.zip
 chmod +x shekel-cli shekeld
@@ -61,7 +61,7 @@ mv shekel-cli shekeld /usr/local/bin/
 apt-get update -y
 apt-get upgrade -y
 apt-get install libzmq3-dev libminiupnpc-dev -y
-https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-Ubuntu16.04-1.3.0.zip
+wget https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-Ubuntu16.04-1.3.0.zip
 unzip shekel-Ubuntu16.04-1.3.0.zip
 rm shekel-Ubuntu16.04-1.3.0.zip
 chmod +x shekel-cli shekeld
