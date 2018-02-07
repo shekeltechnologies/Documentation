@@ -87,8 +87,11 @@ Requirements:
 ### 2. Login via SSH into the server and type the following command in the console as root:
 
 If you are using Windows, [PuTTY](https://putty.org) is a very good SSH client that you can use to connect to a remote Linux server.
+If you are running a VPS from Vultr or similar, you need to use SSH such as putty if you want to copy and paste these commands otherwise you will have to type them all out!
 
-Update and Install new packages by running these commands one by one:
+Update and Install new packages by running these commands line by line *ONE* by *ONE*:
+
+**!!!  Do not copy the entire thing and try to paste it, it will not work! Type or paste only one line at a time and hit enter after each line **!!!
 ```
 apt-get update -y
 apt-get upgrade -y
@@ -100,6 +103,7 @@ apt-get install libdb4.8-dev libdb4.8++-dev -y
 ```
 
 ### 3. Configure swap to avoid running out of memory:
+**!!!  Do not copy the entire thing and try to paste it, it will not work! Type or paste only one line at a time and hit enter after each line **!!!
 ```
 fallocate -l 1500M /mnt/1500MB.swap
 dd if=/dev/zero of=/mnt/1500MB.swap bs=1024 count=1572864
@@ -110,6 +114,7 @@ echo '/mnt/1500MB.swap  none  swap  sw 0  0' >> /etc/fstab
 ```
 
 ### 4. Allow the MasterNode p2p communication port through the OS firewall:
+**!!!  Do not copy the entire thing and try to paste it, it will not work! Type or paste only one line at a time and hit enter after each line **!!!
 ```
 ufw allow 22/tcp
 ufw limit 22/tcp
@@ -134,6 +139,7 @@ ps aux | grep shekeld
 
 
 For **Ubuntu 14.04**
+**!!!  Do not copy the entire thing and try to paste it, it will not work! Type or paste only one line at a time and hit enter after each line **!!!
 ```
 apt-get install libzmq3 libminiupnpc-dev -y
 wget https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-linux-1.3.0.zip
@@ -144,7 +150,8 @@ mv shekel-cli shekeld /usr/local/bin/
 shekeld
 ```
 
-For **Ubuntu 16.04**
+For **Ubuntu 16.04***
+**!!!  Do not copy the entire thing and try to paste it, it will not work! Type or paste only one line at a time and hit enter after each line **!!!
 ```
 apt-get install libzmq3-dev libminiupnpc-dev -y
 wget https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-Ubuntu16.04-1.3.0.zip
@@ -180,6 +187,8 @@ externalip=<ip_address_here>:5500
 masternodeaddr=<ip_address_here>:5500
 masternodeprivkey=<the_colw_wallet_genkey_value_here>
 ```
+You can right click in SHH (putty) to paste all of the above
+
 Exit the editor by CTRL+X and hit Y + ENTER to commit your changes.
 
 This is a real example, based on the `genkey` obtained in the Cold(Part 1) wallet section:
