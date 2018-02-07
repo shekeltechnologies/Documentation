@@ -7,7 +7,7 @@ Hi and thank you for stopping by. Here are the currently available guides:
 
  
 ### Upgrade 
- * [MasterNode Hot Qt Wallet + Cold Linux Upgrade Guide](guides/MasterNode_Upgrade_Cold_Hot_Linux.md)
+ * [MasterNode Hot Qt Wallet + Cold Linux Upgrade Guide](guides/Masternode_Upgrade_Cold_Hot_Linux.md)
  
 
 ----
