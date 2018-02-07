@@ -6,7 +6,7 @@
 **!!! This guide is for upgrading an existing SHEKEL COLD & Hot wallet MasterNode using the new Shekel ZeroCoin wallet and chain !!!**
 
 ### Requirements
-* Existing version of Shekel-qt on Windows v1.2.0.0 or higher
+* Existing version of Shekel-qt on Windows v1.3.0.0 or higher
 * Backup of your wallet.dat and Passphrase (in encrypted, which is recommended to do) on a seperate drive or folder
 * Backup of your shekel.conf and masternode.conf (just in case you screw something up!)
 
