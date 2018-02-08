@@ -155,7 +155,6 @@ For **Ubuntu 16.04***
 ```
 apt-get install libzmq3-dev libminiupnpc-dev -y
 wget https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-Ubuntu16.04-1.3.0.zip
-mv download shekel-Ubuntu16.04-1.3.0.zip
 unzip shekel-Ubuntu16.04-1.3.0.zip
 rm shekel-Ubuntu16.04-1.3.0.zip
 chmod +x shekel-cli shekeld
