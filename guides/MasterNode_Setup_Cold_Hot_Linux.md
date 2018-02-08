@@ -1,17 +1,35 @@
-## SHEKEL Cold + Hot wallet MasterNode setup guide
+# SHEKEL Cold + Hot wallet MasterNode setup guide
 
 > This is a community contributed guide. Feel free to suggest improvements via Issues or opening Pull Requests. Thank you!
 
+**!!! This guide is for setting up a new MasterNode using the new Shekel ZeroCoin wallet and chain !!!**
 
-**!!! This guide is for setting up a MasterNode using the new Shekel ZeroCoin wallet and chain !!!**
+---
 
+## Requirements
+* Windows 7 or higher (This will be your Cold wallet)
+* Ubuntu 14.04 or 16.04 running on a VPS such as Vultr, or other server (This will be your Hot wallet) running 24/7
+* Static IP Address
+* Port 5505 port forwarded from your router to your Ubuntu server
+* Basic Linux skills
 
-### **Cold** Wallet Setup(Part 1) using the Qt GUI wallet on Windows, OSX, etc
+---
+
+## **Cold** Wallet Setup(Part 1) using the Qt GUI wallet on Windows, OSX, etc
 
 This is the wallet where the MasterNode collateral of 25000 JEW coins will have to be transferred and stored.
 After the setup is complete, this wallet doesn't have to run 24/7 and will be the one receiving the rewards.
 
 ### 1. Install and open the Shekel-Qt wallet on your machine.
+
+#### i.   Download the newest shekel-qt.zip wallet from https://github.com/shekeltechnologies/JewNew/releases/
+#### ii.  Extract the shekel-qt.exe from shekel-qt.zip
+#### iii. Start the new shelkel-qt.exe
+#### iv.  Let the wallet sync
+#### v.   Encrypt your wallet with a passcode (recommended)
+#### vi.  Back up your wallet.dat in case of a mistake 
+
+---
 
 ### 2. Create a receiving address for the Masternode collateral funds.
 
@@ -93,10 +111,9 @@ Update and Install new packages by running these commands line by line *ONE* by 
 
 **!!!  Do not copy the entire thing and try to paste it, it will not work! Type or paste only one line at a time and hit enter after each line **!!!
 ```
-apt-get update -y
+apt-get update
 apt-get upgrade -y
-apt-get install wget nano unrar unzip -y
-apt-get install libboost-all-dev libevent-dev software-properties-common -y
+apt-get install wget nano unrar unzip libboost-all-dev libevent-dev software-properties-common -y
 add-apt-repository ppa:bitcoin/bitcoin -y
 apt-get update
 apt-get install libdb4.8-dev libdb4.8++-dev -y
