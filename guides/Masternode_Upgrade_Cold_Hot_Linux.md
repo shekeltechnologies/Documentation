@@ -1,33 +1,36 @@
-## SHEKEL Cold + Hot wallet MasterNode upgrade guide
+# SHEKEL Cold + Hot wallet MasterNode upgrade guide
 
 > This is a community contributed guide. Feel free to suggest improvements via Issues or opening Pull Requests. Thank you!
 
-
 **!!! This guide is for upgrading an existing SHEKEL COLD & Hot wallet MasterNode using the new Shekel ZeroCoin wallet and chain !!!**
+**!!! See the SHEKEL Cold + Hot wallet MasterNode setup guide for a new masternode !!!**
 
-### Requirements
-* Existing version of Shekel-qt on Windows v1.3.0.0 or higher
+---
+
+## Requirements
+* Existing version of Shekel-qt on Windows v1.3.0.0 or higher (See Install guide for a new masternode)
 * Backup of your wallet.dat and Passphrase (in encrypted, which is recommended to do) on a seperate drive or folder
 * Backup of your shekel.conf and masternode.conf (just in case you screw something up!)
 
+---
 
-### **Cold** Wallet Upgrade (Part 1) using the Qt GUI wallet on Windows, OSX, etc
+## **Cold** Wallet Upgrade (Part 1) using the Qt GUI wallet on Windows, OSX, etc
 
 
 ### 1. Backup your wallet! Copy your wallet.dat somewhere safe. Close down the wallet you want to upgrade
 ### 2. Download the newest shekel-qt.zip wallet from https://github.com/shekeltechnologies/JewNew/releases/
 ### 3. Extract the shekel-qt.exe from shekel-qt.zip
 ### 4. Replace your OLD shekel-qt.exe with the new one
-### 5 Start the new shelkel-qt.exe
-### 6 Let the wallet sync
+### 5. Start the new shelkel-qt.exe
+### 6. Let the wallet sync
 
 ---
 
 ## **Hot** MasterNode VPS Upgrade(Part 2) with Linux CLI only wallet
 
 
-### Requirements:
- * Linux VPS (**Ubuntu 14.04** 64 bit or **Ubuntu 16.04** 65 bit). Choose the correct version for your OS from the release page
+## Requirements:
+ * Linux VPS (**Ubuntu 14.04** 64 bit or **Ubuntu 16.04** 64 bit). Choose the correct version for your OS from the release page
  * Backup of your shekel.conf (just in case you screw something up!)
 
 ### 1. Login via SSH into the server and type the following command in the console as root:
@@ -46,6 +49,7 @@ ps aux | grep shekeld
 
 ### 3. Upgrade the Shekel CLI wallet. Always download the latest [release available](https://github.com/shekeltechnologies/JewNew/releases), unpack it
 #### For Ubuntu 14.04 (see below for 16.04)
+**!!!  Do not copy the entire thing and try to paste it, it will not work! Type or paste only one line at a time and hit enter after each line **!!!
 ```
 apt-get update -y
 apt-get upgrade -y
@@ -57,6 +61,7 @@ chmod +x shekel-cli shekeld
 mv shekel-cli shekeld /usr/local/bin/
 ```
 #### For Ubuntu 16.04 only
+**!!!  Do not copy the entire thing and try to paste it, it will not work! Type or paste only one line at a time and hit enter after each line **!!!
 ```
 apt-get update -y
 apt-get upgrade -y
