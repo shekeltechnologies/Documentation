@@ -13,12 +13,12 @@
 
 ---
 
-## Wallet Setup(Part 1) using the Qt GUI wallet on Windows
+## Wallet Setup(Part 1) installing the Qt GUI wallet on Windows
 
-The MasterNode requires a collateral of 25000 JEW coins will have to be transferred and stored. You can buy these from the exchanges listed on the Shekel.io website
-This will run 24/7 and provide services to the network via TCP port 5500 for which it will be rewarded with coins. 
-Since this is one wallet that holds your funds as well as running the masternode, you run the risk of loosing the funds in the event of an attack.
-After the setup is complete, this wallet needs to have a stable Internet Connection and will need to run 24/7.
+> The MasterNode requires a collateral of 25000 JEW coins will have to be transferred and stored. You can buy these from the exchanges listed on the Shekel.io website.
+> This will run 24/7 and provide services to the network via TCP port 5500 for which it will be rewarded with coins. 
+> Since this is one wallet that holds your funds as well as running the masternode, you run the risk of loosing the funds in the event of an attack.
+> After the setup is complete, this wallet needs to have a stable Internet Connection and will need to run 24/7.
 
 ### 1. Install and open the Shekel-Qt wallet on your machine.
 
@@ -77,13 +77,13 @@ After the setup is complete, this wallet needs to have a stable Internet Connect
    ```
    Where `45.76.33.125` is the external IP of the Windows PC running the masternode that will provide services to the network.
    
-   If you want to run multiple masternodes from this wallet, you will need to repeat the previous 2-10 steps. The `masternode.conf` file will contain an entry for each masternode that will be added to the network.
+> If you want to run multiple masternodes from this wallet, you will need to repeat the previous 2-10 steps. The `masternode.conf` file will contain an entry for each masternode that will be added to the network.
 
 ### 9. Restart the Qt wallet to pick up the `masternode.conf` changes.
 ### 10. Go to Masternodes tab and check if your newly added masternode is listed.
 
 
-If you are running the Windows MasterNode server in Amazon AWS or another place where additional firewalls are in place, you need to allow incoming connections on port 5500/TCP
+> If you are running the Windows MasterNode server in Amazon AWS or another place where additional firewalls are in place, you need to allow incoming connections on port 5500/TCP
 
 
 ### 11. Edit the MasterNode main wallet configuration file:
@@ -122,10 +122,9 @@ masternodeaddr=45.76.33.125:5500
 masternodeprivkey=3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg
 ```
 
-The IP address(`45.76.33.125` in this example) will be different for you. 
-(In a web browser you can visit www.whatismyip.com to get your External IP Address)
-Same goes for the `masternodeprivkey` value. You need the key returned by the `masternode genkey` command executed in the Windows wallet(Part 1). 
-The exact same key needs to be used for the masternode entry in the `masternode.conf` file of your Wallet(Part 1)
+> The IP address(`45.76.33.125` in this example) will be different for you. In a web browser you can visit www.whatismyip.com to get your External IP Address.
+> Same goes for the `masternodeprivkey` value, you need the key returned by the `masternode genkey` command executed in the Windows wallet earlier (Part 1). 
+> The exact same key needs to be used for the masternode entry in the `masternode.conf` file of your Wallet(Part 1)
 
 
 ### 12. Re-start the Windows wallet by closing it down and then running shekel-qt.exe again
@@ -135,7 +134,7 @@ Either look at the icon in the bottom right until there is a Blue tick or go to 
 ```
 You can also go to Tools > Debug and type in getinfo
 ``` 
-Give it 30 mins now for this node to "get social" with the other nodes in the network. Once it peers up with a good number of other masternodes, the following activation steps should work fine.
+> Give it 30 mins now for this node to "get social" with the other nodes in the network. Once it peers up with a good number of other masternodes, the following activation steps should work fine.
 
 
 ## Enable the Masternode
@@ -171,7 +170,7 @@ Instead, if you get status `Masternode not found in the list of available master
 You can close down the Windows Wallet and run the shekel-qt.exe again to restart the wallet
 Then rerun the `startmasternode` command again in the Windows wallet.
 
-Remember as this is a standalone Windows Hot Wallet that holds the collateral and runs the masterode it can NOT be closed without impacting the operation of the MasterNode in the network. You must let it run 24/7.
+> Remember as this is a standalone Windows Hot Wallet that holds the collateral and runs the masterode it can NOT be closed without impacting the operation of the MasterNode in the network. You must let it run 24/7.
 
 You should now be able to see your MasterNode(s) on this web page: [http://shekel.mn.zone](http://shekel.mn.zone).
 
