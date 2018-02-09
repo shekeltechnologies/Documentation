@@ -10,7 +10,7 @@
 * Windows 7 or higher (This will be your Cold wallet)
 * Ubuntu 14.04 or 16.04 running on a VPS such as Vultr, or other server (This will be your Hot wallet) running 24/7
 * Static IP Address
-* Port 5505 port forwarded from your router to your Ubuntu server
+* Port 5500 port forwarded from your router to your Ubuntu server
 * Basic Linux skills
 
 ---
@@ -22,12 +22,21 @@ After the setup is complete, this wallet doesn't have to run 24/7 and will be th
 
 ### 1. Install and open the Shekel-Qt wallet on your machine.
 
-#### i.   Download the newest shekel-qt.zip wallet from https://github.com/shekeltechnologies/JewNew/releases/
-#### ii.  Extract the shekel-qt.exe from shekel-qt.zip
-#### iii. Start the new shelkel-qt.exe
-#### iv.  Let the wallet sync
-#### v.   Encrypt your wallet with a passcode (recommended)
-#### vi.  Back up your wallet.dat in case of a mistake 
+#### i.    Download the newest shekel-qt.zip wallet from https://github.com/shekeltechnologies/JewNew/releases/
+#### ii.   Extract the shekel-qt.exe from shekel-qt.zip
+#### iii.  Start the new shelkel-qt.exe
+#### iv.   Click Run if you get this warning:
+![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-windows-openfile.png "Wallet Open File Warning")
+#### v.    If this is the first time you have started the wallet, you will be asked to enter a custom data directory. We recommend you enter the following, this creates the data directory where you extracted the shekel-qt.exe in part ii. It will be easier to find your wallet and config files if you know where they are:
+![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-windows-data-directory-box.png "Wallet Data Directory box")
+#### vi.   If this is the first time you have started the wallet, you will be asked to Allow Access by the firewall, click Allow Access:
+![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-windows-firewall.png "Wallet Windows Firewall Warning")
+#### vii.  Let the wallet sync until you see this symbol
+![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-wallet-sync.png "Wallet Sync Completed")
+
+#### viii. Encrypt your wallet with a long passphrase and either save it in a password manager such as keepass, or write it down and keep in safe (in a locked compartment or safe) (recommended). This passphrase is your only key to your wallet, do NOT lose it or you will lose all your JEWS.
+To encrypt the wallet, go to Settings > Encrypt wallet. Enter the passphrase, click ok. You will then have to restart the wallet and then go to Settings > Unlock Wallet and then enter the passphrase to unlock the wallet, for staking, controlling the masternode or sending your JEWS.
+#### ix.   Back up your wallet.dat in case of a mistake as soon as you encrypt your wallet. Once you have encrypted the wallet, your previous backups will not work, so back it up by going to File > Backup Wallet and save the backup to more than one place. Such as a USB key or a network share.
 
 ---
 
