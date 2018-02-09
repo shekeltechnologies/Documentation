@@ -32,7 +32,7 @@
 #### vi.   If this is the first time you have started the wallet, you will be asked to Allow Access by the firewall, click Allow Access:
 ![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-windows-firewall.png "Wallet Windows Firewall Warning")
 #### vii.  Let the wallet sync until you see this symbol
-![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/Shekel-wallet-sync.png "Wallet Sync Completed")
+![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-wallet-sync.png "Wallet Sync Completed")
 
 #### viii. Encrypt your wallet with a long passphrase and either save it in a password manager such as keepass, or write it down and keep in safe (in a locked compartment or safe) (recommended). This passphrase is your only key to your wallet, do NOT lose it or you will lose all your JEWS.
 To encrypt the wallet, go to Settings > Encrypt wallet. Enter the passphrase, click ok. You will then have to restart the wallet and then go to Settings > Unlock Wallet and then enter the passphrase to unlock the wallet, for staking, controlling the masternode or sending your JEWS.
