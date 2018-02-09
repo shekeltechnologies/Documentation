@@ -15,9 +15,9 @@
 
 ## Wallet Setup(Part 1) installing the Qt GUI wallet on Windows
 
-> The MasterNode requires a collateral of 25000 JEW coins will have to be transferred and stored. You can buy these from the exchanges listed on the Shekel.io website.
+> The MasterNode requires a collateral of 25000 JEW coins which will have to be transferred and stored. You can buy these from the exchanges listed on the http://Shekel.io website.
 > This will run 24/7 and provide services to the network via TCP port 5500 for which it will be rewarded with coins. 
-> Since this is one wallet that holds your funds as well as running the masternode, you run the risk of loosing the funds in the event of an attack.
+> Since this is one wallet that holds your funds as well as running the masternode, you run the risk of losing the funds in the event of an attack.
 > After the setup is complete, this wallet needs to have a stable Internet Connection and will need to run 24/7.
 
 ### 1. Install and open the Shekel-Qt wallet on your machine.
@@ -29,15 +29,14 @@
 ![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-windows-openfile.png "Wallet Open File Warning")
 #### v.    If this is the first time you have started the wallet, you will be asked to enter a custom data directory. We recommend you enter the following, this creates the data directory where you extracted the shekel-qt.exe in part ii. It will be easier to find your wallet and config files if you know where they are:
 ![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-windows-data-directory-box.png "Wallet Data Directory box")
-#### vi.   If this is the first time you have started the wallet, you will be asked to Allow Access by the firewall, click Allow Access:
+#### vi.   If this is the first time you have started the wallet, you will be asked to Allow Access by the firewall, click Allow access:
 ![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-windows-firewall.png "Wallet Windows Firewall Warning")
 #### vii.  Let the wallet sync until you see this symbol
 ![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-wallet-sync.png "Wallet Sync Completed")
 
-#### viii. Encrypt your wallet with a long passphrase and either save it in a password manager such as keepass, or write it down and keep in safe (in a locked compartment or safe) (recommended). This passphrase is your only key to your wallet, do NOT lose it or you will lose all your JEWS.
+#### viii. Encrypt your wallet with a long passphrase and either save it in a password manager such as keepass, or write it down and keep it safe (in a locked compartment or safe) (recommended). This passphrase is your only key to your wallet, do NOT lose it or you will lose all your JEWS. Do not let anyone steal your passcode or wallet either, just like in real life!
 To encrypt the wallet, go to Settings > Encrypt wallet. Enter the passphrase, click ok. You will then have to restart the wallet and then go to Settings > Unlock Wallet and then enter the passphrase to unlock the wallet, for staking, controlling the masternode or sending your JEWS.
-#### ix.   Back up your wallet.dat in case of a mistake as soon as you encrypt your wallet. Once you have encrypted the wallet, your previous backups will not work, so back it up by going to File > Backup Wallet and save the backup to more than one place. Such as a USB key or a network share.
-
+#### ix.   Back up your wallet.dat in case of a mistake as soon as you encrypt your wallet. Once you have encrypted the wallet, your previous backups will not work, so back it up by going to File > Backup Wallet and save the backup to more than one place. Such as a USB key or a network share. I recommend keeping your wallet and passphrase seperate so that no one can steal both. They would need both to do anything to your wallet or JEWS!
 ---
 
 ### 2. Create a receiving address for the Masternode collateral funds.
@@ -80,7 +79,9 @@ To encrypt the wallet, go to Settings > Encrypt wallet. Enter the passphrase, cl
 
    Both `txhash` and `outputidx` will be used in the next step. `outputidx` can be `0` or `1`, both are valid values
 
-### 8. Go to `Tools` -> `Open Masternode Configuration File` and add a line in the newly opened `masternode.conf` file. The file will contain an example that is commented out, but based on the above values, I would add this line in:
+### 8. Go to `Tools` -> `Open Masternode Configuration File` and add a line in the newly opened `masternode.conf` file. 
+> If you get prompted to choose a program, select notepad.exe to open it.
+The file will contain an example that is commented out, but based on the above values, I would add this line in:
    ```
    MN1 45.76.33.125:5500 3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 6782efab3a76fa557370ec3b9c13bf0d0df3d4df63adc018e1dd90e1c8da088e 1
    ```
@@ -97,8 +98,9 @@ To encrypt the wallet, go to Settings > Encrypt wallet. Enter the passphrase, cl
 
 ### 11. Edit the MasterNode main wallet configuration file:
 ```
-Tooks > shekel.conf
+Tools > Open Wallet Configuration File
 ```
+> If you get prompted to choose a program, select notepad.exe to open it
 
 Enter this wallet configuration data and change accordingly:
 ```
