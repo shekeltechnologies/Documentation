@@ -2,8 +2,7 @@
 
 > This is a community contributed guide. Feel free to suggest improvements via Issues or opening Pull Requests. Thank you!
 
-**!!! This guide is for upgrading an existing SHEKEL COLD & Hot wallet MasterNode using the new Shekel ZeroCoin wallet and chain !!!**
-**!!! See the SHEKEL Cold + Hot wallet MasterNode setup guide for a new masternode !!!**
+**!!! This guide is for installing a new SHEKEL Hot wallet MasterNode using the new Shekel ZeroCoin wallet and chain !!!**
 
 ---
 
