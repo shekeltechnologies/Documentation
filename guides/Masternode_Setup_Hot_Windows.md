@@ -79,21 +79,23 @@ To encrypt the wallet, go to Settings > Encrypt wallet. Enter the passphrase, cl
 
    Both `txhash` and `outputidx` will be used in the next step. `outputidx` can be `0` or `1`, both are valid values
 
-### 8. Go to `Tools` -> `Open Masternode Configuration File` and add a line in the newly opened `masternode.conf` file. 
+### 8. Go to `Tools` -> `Open Masternode Configuration File` and add a line in the newly opened `masternode.conf` file.
 > If you get prompted to choose a program, select notepad.exe to open it. 
 
 > This is an example of what you need in masternode.conf. Ignore any example text that may already be in there that contains a '#' in front of each line, that is just an example to help you. Read it if it helps.
 ```
 mn1 your_vps_ip_address:5500 your_masternode_key_output_from-masternode_genkey txhash_from-masternode_outputs Outputidx_from-masternode_outputs
 ```
->
-The file will contain an example that is commented out(with a # in front), but based on the above values, I would add this line in:
+> The file will contain an example that is commented out(with a # in front), but based on the above values, I would add this line in:
 ```
 MN1 45.76.33.125:5500 3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 6782efab3a76fa557370ec3b9c13bf0d0df3d4df63adc018e1dd90e1c8da088e 1
 ```
 >   Where `45.76.33.125` is the external IP of the masternode server that will provide services to the network.
+
 >   Where `3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg` is your masternode key from `masternode genkey`.
+
 >   Where `6782efab3a76fa557370ec3b9c13bf0d0df3d4df63adc018e1dd90e1c8da088e` is your txhash from `masternode outputs`.
+
 >   Where `1` is your outputidx from `masternode outputs`
 
 ### 9. Restart the Qt wallet to pick up the `masternode.conf` changes.
@@ -139,11 +141,12 @@ externalip=45.76.33.125:5500
 masternodeaddr=45.76.33.125:5500
 masternodeprivkey=3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg
 ```
+> The IP address(`45.76.33.125` in this example) will be different for you. 
+> In a web browser you can visit www.whatismyip.com to get your External IP Address.
 
-> The IP address(`45.76.33.125` in this example) will be different for you. In a web browser you can visit www.whatismyip.com to get your External IP Address.
-> Same goes for the `masternodeprivkey` value, you need the key returned by the `masternode genkey` command executed in the Windows wallet earlier (Part 1). 
+> Same goes for the `masternodeprivkey` value, you need the key returned by the `masternode genkey` command executed in the Windows wallet earlier (Part 1).
+
 > The exact same key needs to be used for the masternode entry in the `masternode.conf` file of your Wallet(Part 1)
-
 
 ### 12. Re-start the Windows wallet by closing it down and then running shekel-qt.exe again
 
