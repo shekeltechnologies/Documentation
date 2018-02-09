@@ -91,10 +91,10 @@ The file will contain an example that is commented out(with a # in front), but b
 ```
 MN1 45.76.33.125:5500 3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 6782efab3a76fa557370ec3b9c13bf0d0df3d4df63adc018e1dd90e1c8da088e 1
 ```
-   Where `45.76.33.125` is the external IP of the masternode server that will provide services to the network.
-   Where `3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg` is your masternode key from `masternode genkey`.
-   Where `6782efab3a76fa557370ec3b9c13bf0d0df3d4df63adc018e1dd90e1c8da088e` is your txhash from `masternode outputs`.
-   Where `1` is your outputidx from `masternode outputs`
+>   Where `45.76.33.125` is the external IP of the masternode server that will provide services to the network.
+>   Where `3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg` is your masternode key from `masternode genkey`.
+>   Where `6782efab3a76fa557370ec3b9c13bf0d0df3d4df63adc018e1dd90e1c8da088e` is your txhash from `masternode outputs`.
+>   Where `1` is your outputidx from `masternode outputs`
 
 ### 9. Restart the Qt wallet to pick up the `masternode.conf` changes.
 ### 10. Go to Masternodes tab and check if your newly added masternode is listed.
