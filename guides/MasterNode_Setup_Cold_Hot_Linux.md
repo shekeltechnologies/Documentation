@@ -81,21 +81,25 @@ To encrypt the wallet, go to Settings > Encrypt wallet. Enter the passphrase, cl
    Both `txhash` and `outputidx` will be used in the next step. `outputidx` can be `0` or `1`, both are valid values
 
 ### 8. Go to `Tools` -> `Open Masternode Configuration File` and add a line in the newly opened `masternode.conf` file. 
-> If you get prompted to choose a program, select notepad.exe to open it. 
+> If you get prompted to choose a program, select notepad.exe to open it.
+
+> This is an example of what you need in masternode.conf. Ignore any example text that may already be in there that contains a '#' in front of each line, that is just an example to help you. Read it if it helps.
 
 > This is an example of masternode.conf
 ```
 mn1 your_vps_ip_address:5500 your_masternode_key_output_from-masternode_genkey txhash_from-masternode_outputs Outputidx_from-masternode_outputs
 ```
->
-The file will contain an example that is commented out(with a # in front), but based on the above values, I would add this line in:
+> The file will contain an example that is commented out(with a # in front), but based on the above values, I would add this line in:
 ```
 MN1 45.76.33.125:5500 3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg 6782efab3a76fa557370ec3b9c13bf0d0df3d4df63adc018e1dd90e1c8da088e 1
 ```
-   Where `45.76.33.125` is the external IP of the masternode server that will provide services to the network.
-   Where `3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg` is your masternode key from `masternode genkey`.
-   Where `6782efab3a76fa557370ec3b9c13bf0d0df3d4df63adc018e1dd90e1c8da088e` is your txhash from `masternode outputs`.
-   Where `1` is your outputidx from `masternode outputs`
+>   Where `45.76.33.125` is the external IP of the masternode server that will provide services to the network.
+
+>   Where `3HaYBVUCYjEMeeH1Y4sBGLALQZE1Yc1K64xiqgX37tGBDQL8Xg` is your masternode key from `masternode genkey`.
+
+>   Where `6782efab3a76fa557370ec3b9c13bf0d0df3d4df63adc018e1dd90e1c8da088e` is your txhash from `masternode outputs`.
+
+>   Where `1` is your outputidx from `masternode outputs`.
       
 ### 9. Restart the Qt wallet to pick up the `masternode.conf` changes.
 ### 10. Go to Masternodes tab and check if your newly added masternode is listed.
