@@ -9,7 +9,7 @@
 ## Requirements
 * Windows 7 or higher
 * Static IP Address
-* Port 5505 port forwarded from your router
+* Port 5500 port forwarded from your router
 
 ---
 
