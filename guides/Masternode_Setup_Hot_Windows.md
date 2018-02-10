@@ -10,6 +10,7 @@
 * Windows 7 or higher
 * Static IP Address
 * Port 5500 port forwarded from your router
+* Basic knowledge of Windows
 
 ---
 
