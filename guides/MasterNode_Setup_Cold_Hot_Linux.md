@@ -132,7 +132,7 @@ If you are running a VPS from Vultr or similar, you need to use SSH such as putt
 
 Update and Install new packages by running these commands line by line *ONE* by *ONE*:
 
-**!!!  Do not copy the entire thing and try to paste it, it will not work! Type or paste only one line at a time and hit enter after each line **!!!
+**!!!  Do not copy the entire thing and try to paste it, it will not work! Type or paste only one line at a time and hit enter after each line !!!**
 
 ```
 apt-get update
