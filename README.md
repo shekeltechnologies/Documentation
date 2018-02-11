@@ -15,6 +15,7 @@ Hi and thank you for stopping by. Here are the currently available guides:
 
 ### Upgrade Wallet
 * [SHEKEL MAC Qt Wallet Upgrade Guide](guides/Wallet_Upgrade_Mac.md)
+* [SHEKEL Windows Qt Wallet Upgrade Guide](guides/Wallet_Upgrade_Windows.md)
 
 
 ### Upgrade Masternode
