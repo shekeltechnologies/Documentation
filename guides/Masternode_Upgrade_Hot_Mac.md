@@ -78,7 +78,7 @@ Instead, if you get status `Masternode not found in the list of available master
 You can close down the Mac Wallet and run the shekel-qt again to restart the wallet
 Then rerun the `startmasternode` command again in the Mac wallet.
 
-> Remember as this is a standalone Mac Hot Wallet that holds the collateral and runs the masterode it can NOT be closed without impacting the operation of the MasterNode in the network. You must let it run 24/7.
+> Remember as this is a standalone Mac Hot Wallet that holds the collateral and runs the masternode it can NOT be closed without impacting the operation of the MasterNode in the network. You must let it run 24/7.
 
 You should now be able to see your MasterNode(s) on this web page: [http://shekel.mn.zone](http://shekel.mn.zone).
 
