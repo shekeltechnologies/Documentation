@@ -1,4 +1,4 @@
-# SHEKEL Cold + Hot wallet MasterNode upgrade guide
+# SHEKEL MasterNode Hot Qt Wallet + Cold Linux Upgrade Guide
 
 > This is a community contributed guide. Feel free to suggest improvements via Issues or opening Pull Requests. Thank you!
 
@@ -10,6 +10,7 @@
 
 ## Requirements
 * Existing version of Shekel-qt on Windows v1.3.0.0 or higher already installed (if not, see the [MasterNode Hot Qt Wallet + Cold Linux Setup Guide](guides/MasterNode_Setup_Cold_Hot_Linux.md) instead)
+* Existing version of shekeld and shekel-cli v1.3.0.0 or higher already installed on your Ubuntu 14.04/16.04 VPS
 * Backup of your wallet.dat and Passphrase (in encrypted, which is recommended to do) on a seperate drive or folder
 * Backup of your shekel.conf and masternode.conf (just in case you screw something up!)
 
