@@ -2,7 +2,10 @@
 
 Hi and thank you for stopping by. Here are the currently available guides:
 
-### Install
+### Install Wallet
+* [SHEKEL MAC Qt Wallet Install Guide](guides/Wallet_Install_Mac.md)
+
+### Install Masternode
  * [MasterNode Hot Qt Wallet + Cold Linux Setup Guide](guides/MasterNode_Setup_Cold_Hot_Linux.md)
  * [MasterNode Hot Qt Wallet + Cold Windows Setup Guide](guides/Masternode_Setup_Hot_Windows.md)
  
