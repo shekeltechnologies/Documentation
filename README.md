@@ -4,7 +4,6 @@ Hi and thank you for stopping by. Here are the currently available guides:
 
 ### Install
  * [MasterNode Hot Qt Wallet + Cold Linux Setup Guide](guides/MasterNode_Setup_Cold_Hot_Linux.md)
- * [MasterNode Hot Qt Wallet + Cold Mac Setup Guide](guides/Masternode_Setup_Hot_Mac.md)
  * [MasterNode Hot Qt Wallet + Cold Windows Setup Guide](guides/Masternode_Setup_Hot_Windows.md)
  
 
