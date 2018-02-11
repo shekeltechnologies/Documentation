@@ -62,7 +62,7 @@ To encrypt the wallet, go to Settings > Encrypt wallet. Enter the passphrase, cl
 
 #### xiv.  If you ever minimize your wallet, you can find the icon in the Dock at the bottom right. Hold down Control (CTRL) and Click to get the menu options below:
 ![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-mac-dock2.png "Shekel-qt wallet")
-![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-mac-data-dock.png "Shekel-qt wallet")
+![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-mac-dock.png "Shekel-qt wallet")
 
 Now proceed to the rest of the guide!
 
