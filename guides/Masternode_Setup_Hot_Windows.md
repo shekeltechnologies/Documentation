@@ -79,6 +79,30 @@ To encrypt the wallet, go to Settings > Encrypt wallet. Enter the passphrase, cl
    ```
 
    Both `txhash` and `outputidx` will be used in the next step. `outputidx` can be `0` or `1`, both are valid values
+   
+---
+
+**!!!For anyone having issues with masternode outputs being blank!!!**
+>If you have given the transaction a few minutes to get a confirmation and you still do not get any output from masternode outputs it means that you have not sent EXACTLY 25000 JEW in a single transaction. 
+>To fix this, you do not need to send coins back to the exchange. You can send yourself coins from within your wallet. It is good practice to use a separate address for each masternode so that you can see the rewards from each masternode in a different address.
+>So, follow the steps below. You can change the MN01 to MN02 for your 2nd masternode, etc. In fact, you can give the address any label that makes sense to you!
+
+>Go to `Tools` -> `Debug console`
+```
+getnewaddress MN01
+```
+>A new address will be output. Copy the address.
+```
+sendtoaddress copied-address 25000
+```
+>Wait 1 minute
+```
+masternode outputs
+```
+>Done.
+
+---
+
 
 ### 8. Go to `Tools` -> `Open Masternode Configuration File` and add a line in the newly opened `masternode.conf` file.
 > If you get prompted to choose a program, select notepad.exe to open it. 
