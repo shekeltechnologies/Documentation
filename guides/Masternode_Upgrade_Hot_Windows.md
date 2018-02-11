@@ -3,6 +3,8 @@
 > This is a community contributed guide. Feel free to suggest improvements via Issues or opening Pull Requests. Thank you!
 
 **!!! This guide is for UPGRADING an existing SHEKEL Hot wallet MasterNode using the new Shekel ZeroCoin wallet and chain !!!**
+**!!! WARNING: DO NOT ATTEMPT TO USE THIS WALLET TO UPGRADE FROM THE WHITE JEW WALLET (OLD JEW), YOU NEED TO SWAP BY 28th Feb, see the discord) !!!**
+
 
 **!!! See the [MasterNode Hot Qt Wallet + Cold Windows Setup Guide](guides/Masternode_Setup_Hot_Windows.md) for a new masternode !!!**
 
