@@ -5,12 +5,12 @@
 **!!! This guide is for upgrading an existing SHEKEL Windows wallet using the new Shekel ZeroCoin wallet and chain !!!**
 **!!! WARNING: DO NOT ATTEMPT TO USE THIS WALLET TO UPGRADE FROM THE WHITE JEW WALLET (OLD JEW), YOU NEED TO SWAP BY 28th Feb, see the discord) !!!**
 
-**!!! See the [MasterNode Hot Qt Wallet + Cold Linux Setup Guide](guides/MasterNode_Setup_Cold_Hot_Linux.md) for a new masternode !!!**
+**!!! See the [SHEKEL Windows Qt Wallet Install Guide](guides/Wallet_Install_Windows.md) for a new wallet !!!**
 
 ---
 
 ## Requirements
-* Existing version of Shekel-qt on Windows v1.3.0.0 or higher already installed (if not, see the [MasterNode Hot Qt Wallet + Cold Linux Setup Guide](guides/MasterNode_Setup_Cold_Hot_Linux.md) instead)
+* Existing version of Shekel-qt on Windows v1.3.0.0 or higher already installed (if not, see the [SHEKEL Windows Qt Wallet Install Guide](guides/Wallet_Install_Windows.md) instead)
 * Backup of your wallet.dat and Passphrase (in encrypted, which is recommended to do) on a seperate drive or folder
 * Backup of your shekel.conf and masternode.conf (just in case you screw something up!)
 
