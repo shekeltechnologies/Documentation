@@ -4,10 +4,12 @@
 
 **!!! This guide is for installing a new SHEKEL Hot wallet MasterNode using the new Shekel ZeroCoin wallet and chain !!!**
 
+**!!! DISCLAIMER: Do not run a Windows masternode at home whether you have a static IP Address or not. Your IP Address can be traced back to your home, therefore it is unsafe. You can still run a cold wallet at home !!!**
+
 ---
 
 ## Requirements
-* Windows 7 or higher
+* Windows 7, Server 2013 or higher running on a VPS or cloud
 * Static IP Address
 * Port 5500 port forwarded from your router
 * Basic knowledge of Windows
