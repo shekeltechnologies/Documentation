@@ -37,9 +37,7 @@
 #### viii.  The easiest way to get around this is to simply hold down Control (CTRL) on your keyboard and  click Shekel-qt. You will get a dialog box, with the option to 'Open' as the first option. Click open. Now, you might get another box warning you Shekel-Qt was downloaded from the Internet. Click Open.
 ![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-mac-unidentified-openanyway.png "Shekel-qt unidentified developer open")
 ![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-mac-unidentified-openanyway2.png "Shekel-qt unidentified developer open box")
-#### ix. Before you see the wallet, you will see the following dialog box asking you to choose the Data directory. If you choose the default Data directory, the location for this directory is `~/Library/Application\ Support/Shekel/`. You would therefore use the Finder (Icon that has a face) to type in this path to find it. In this example, I will be choosing a Custom path as shown in the screenshot, my user is called `macuser` but yours will be different. The username depends on the username you are using on your Mac, so replace it with your own:
-![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-mac-data-directory-box.png "Shekel-qt Custom Data Directory")
-#### x.   The Shekel-Qt wallet will now open
+#### ix.   The Shekel-Qt wallet will now open
 ![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-mac-wallet.png "Shekel-qt wallet")
 Let the wallet sync until you see this symbol
 ![Alt text](https://github.com/shekeltechnologies/Documentation/blob/master/images/shekel-wallet-sync.png "Wallet Sync Completed")
