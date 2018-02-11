@@ -15,7 +15,7 @@ Hi and thank you for stopping by. Here are the currently available guides:
  
  
 ### Help
- 
+ * [MasterNode Frequently Asked Questions](guides/Shekel_Wallet_FAQ.md)
 
 ----
 
