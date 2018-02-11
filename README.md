@@ -4,6 +4,7 @@ Hi and thank you for stopping by. Here are the currently available guides:
 
 ### Install Wallet
 * [SHEKEL MAC Qt Wallet Install Guide](guides/Wallet_Install_Mac.md)
+* [SHEKEL Windows Qt Wallet Install Guide](guides/Wallet_Install_Windows.md)
 
 
 ### Install Masternode
