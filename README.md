@@ -12,6 +12,10 @@ Hi and thank you for stopping by. Here are the currently available guides:
  * [MasterNode Hot Qt Wallet + Cold Linux Upgrade Guide](guides/Masternode_Upgrade_Cold_Hot_Linux.md)
  * [MasterNode Hot Qt Wallet + Cold Windows Setup Guide](guides/Masternode_Upgrade_Hot_Windows.md)
  
+ 
+ 
+### Help
+ 
 
 ----
 
