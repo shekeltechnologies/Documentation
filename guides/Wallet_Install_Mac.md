@@ -2,7 +2,7 @@
 
 > This is a community contributed guide. Feel free to suggest improvements via Issues or opening Pull Requests. Thank you!
 
-**!!! This guide is for installing a new SHEKEL Hot wallet using the new Shekel ZeroCoin wallet and chain !!!**
+**!!! This guide is for installing a new SHEKEL wallet using the new Shekel ZeroCoin wallet and chain !!!**
 
 **!!! WARNING: Do not use this guide to run a masternode at home whether you have a static IP Address or not. Your IP Address can be traced back to your home, therefore it is unsafe. Always run the hot masternode wallet on a VPS or cloud. You can still run a cold wallet at home which you do not need to run 24/7 !!!**
 
