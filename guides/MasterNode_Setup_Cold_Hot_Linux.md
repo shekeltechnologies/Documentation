@@ -4,6 +4,7 @@
 
 **!!! This guide is for setting up a new MasterNode using the new Shekel ZeroCoin wallet and chain !!!**
 **!!! WARNING: DO NOT ATTEMPT TO USE THIS WALLET TO UPGRADE FROM THE WHITE JEW WALLET (OLD JEW), YOU NEED TO SWAP BY 28th Feb, see the discord) !!!**
+
 **!!! WARNING: Do not run a Windows masternode at home whether you have a static IP Address or not. Your IP Address can be traced back to your home, therefore it is unsafe. You can still run a cold wallet at home !!!**
 
 ---
