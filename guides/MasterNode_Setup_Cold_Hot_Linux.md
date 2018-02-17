@@ -201,7 +201,7 @@ shekel-cli stop
 ```
 Run the following command until the shekeld process disappears.
 ```
-ps aux | grep shekeld
+ps aux | grep shekeld | grep -v grep
 ```
 
 
@@ -323,7 +323,7 @@ shekel-cli stop
 ```
 Run the following command until the shekeld process disappears.
 ```
-ps aux | grep shekeld
+ps aux | grep shekeld | grep -v grep
 ```
 Then run the daemon.
 ```
