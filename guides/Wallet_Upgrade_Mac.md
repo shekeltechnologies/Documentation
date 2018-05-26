@@ -2,7 +2,6 @@
 
 > This is a community contributed guide. Feel free to suggest improvements via Issues or opening Pull Requests. Thank you!
 
-**!!! This guide is for UPGRADING an existing SHEKEL wallet MasterNode using the new Shekel ZeroCoin wallet and chain !!!**
 **!!! WARNING: DO NOT ATTEMPT TO USE THIS WALLET TO UPGRADE FROM THE WHITE JEW WALLET (OLD JEW), YOU NEED TO SWAP BY 28th Feb, see the discord) !!!**
 
 
@@ -11,7 +10,7 @@
 ---
 
 ## Requirements
-* Existing Shekel-qt wallet version 1.3.0.0 or higher on Mac already installed (if not, see the [SHEKEL MAC Qt Wallet Install Guide](guides/Wallet_Install_Mac.md) instead)
+* Existing Shekel-qt wallet version 1.4.0. or higher on Mac already installed (if not, see the [SHEKEL MAC Qt Wallet Install Guide](guides/Wallet_Install_Mac.md) instead)
 * Backup of your wallet.dat and Passphrase (in encrypted, which is recommended to do) on a seperate drive or folder
 * Backup of your shekel.conf and masternode.conf (just in case you screw something up!)
 
