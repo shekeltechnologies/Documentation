@@ -4,15 +4,13 @@
 
 **!!! This guide is for upgrading an existing SHEKEL COLD & Hot wallet MasterNode using the new Shekel ZeroCoin wallet and chain !!!**
 
-**!!! WARNING: DO NOT ATTEMPT TO USE THIS WALLET TO UPGRADE FROM THE WHITE JEW WALLET (OLD JEW), YOU NEED TO SWAP BY 28th Feb, see the discord) !!!**
-
 **!!! See the [MasterNode Hot Qt Wallet + Cold Linux Setup Guide](guides/MasterNode_Setup_Cold_Hot_Linux.md) for a new masternode !!!**
 
 ---
 
 ## Requirements
-* Existing version of Shekel-qt on Windows v1.3.0.0 or higher already installed (if not, see the [MasterNode Hot Qt Wallet + Cold Linux Setup Guide](guides/MasterNode_Setup_Cold_Hot_Linux.md) instead)
-* Existing version of shekeld and shekel-cli v1.3.0.0 or higher already installed on your Ubuntu 14.04/16.04 VPS
+* Existing version of Shekel-qt on Windows v1.4.0 or higher already installed (if not, see the [MasterNode Hot Qt Wallet + Cold Linux Setup Guide](guides/MasterNode_Setup_Cold_Hot_Linux.md) instead)
+* Existing version of shekeld and shekel-cli v1.4.0 or higher already installed on your Linux VPS
 * Backup of your wallet.dat and Passphrase (in encrypted, which is recommended to do) on a seperate drive or folder
 * Backup of your shekel.conf and masternode.conf (just in case you screw something up!)
 
@@ -34,7 +32,7 @@
 
 
 ## Requirements:
- * Linux VPS (**Ubuntu 14.04** 64 bit or **Ubuntu 16.04** 64 bit). Choose the correct version for your OS from the release page
+ * Linux 64 bit VPS (e.g. **Ubuntu 16.04**)
  * Backup of your shekel.conf (just in case you screw something up!)
 
 ### 1. Login via SSH into the server and type the following command in the console as root:
@@ -52,29 +50,11 @@ ps aux | grep shekeld
 
 
 ### 3. Upgrade the Shekel CLI wallet. Always download the latest [release available](https://github.com/shekeltechnologies/JewNew/releases), unpack it
-#### For Ubuntu 14.04 (see below for 16.04)
-**!!!  Do not copy the entire thing and try to paste it, it will not work! Type or paste only one line at a time and hit enter after each line **!!!
+
 ```
 apt-get update -y
 apt-get upgrade -y
-apt-get install libzmq3 libminiupnpc-dev -y
-wget https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-linux-1.3.0.zip
-unzip shekel-linux-1.3.0.zip
-rm shekel-linux-1.3.0.zip
-chmod +x shekel-cli shekeld
-mv shekel-cli shekeld /usr/local/bin/
-```
-#### For Ubuntu 16.04 only
-**!!!  Do not copy the entire thing and try to paste it, it will not work! Type or paste only one line at a time and hit enter after each line **!!!
-```
-apt-get update -y
-apt-get upgrade -y
-apt-get install libzmq3-dev libminiupnpc-dev -y
-wget https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-Ubuntu16.04-1.3.0.zip
-unzip shekel-Ubuntu16.04-1.3.0.zip
-rm shekel-Ubuntu16.04-1.3.0.zip
-chmod +x shekel-cli shekeld
-mv shekel-cli shekeld /usr/local/bin/
+wget -qO- https://github.com/shekeltechnologies/JewNew/releases/download/1.4.0/shekel-1.4.0-x86_64-linux.tar.gz | sudo tar xvz -C /usr/local/bin/
 ```
 
 ### 4. Start the service with:
