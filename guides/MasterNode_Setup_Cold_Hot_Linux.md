@@ -3,7 +3,6 @@
 > This is a community contributed guide. Feel free to suggest improvements via Issues or opening Pull Requests. Thank you!
 
 **!!! This guide is for setting up a new MasterNode using the new Shekel ZeroCoin wallet and chain !!!**
-**!!! WARNING: DO NOT ATTEMPT TO USE THIS WALLET TO UPGRADE FROM THE WHITE JEW WALLET (OLD JEW), YOU NEED TO SWAP BY 28th Feb, see the discord) !!!**
 
 **!!! WARNING: Do not run a Windows masternode at home whether you have a static IP Address or not. Your IP Address can be traced back to your home, therefore it is unsafe. You can still run a cold wallet at home !!!**
 
@@ -11,7 +10,7 @@
 
 ## Requirements
 * Windows 7 or higher (This will be your Cold wallet)
-* Ubuntu 14.04 or 16.04 running on a VPS such as Vultr, or other server (This will be your Hot wallet) running 24/7
+* Linux 64 bit VPS (e.g. **Ubuntu 16.04**) such as Vultr, or other server (This will be your Hot wallet) running 24/7
 * Static IP Address
 * Port 5500 port forwarded from your router to your Ubuntu server
 * Basic Linux skills
@@ -146,7 +145,7 @@ This will run 24/7 and provide services to the network via TCP port 5500 for whi
 ### 1. Get a VPS server from a provider like Vultr, DigitalOcean, Linode, Amazon AWS, etc. 
 
 Requirements:
- * Linux VPS (**Ubuntu 14.04** 64 bit and **Ubuntu 16.04** 64 bit) - Choose the correct version for your OS from the release page
+ * Linux VPS 64 bit(e.g. **Ubuntu 16.04**)
  * Dedicated Public IP Address
  * Recommended at least 1GB of RAM 
 
@@ -156,28 +155,15 @@ Requirements:
 If you are using Windows, [PuTTY](https://putty.org) is a very good SSH client that you can use to connect to a remote Linux server.
 If you are running a VPS from Vultr or similar, you need to use SSH such as putty if you want to copy and paste these commands otherwise you will have to type them all out!
 
-Update and Install new packages by running these commands line by line *ONE* by *ONE*:
-
-**!!!  Do not copy the entire thing and try to paste it, it will not work! Type or paste only one line at a time and hit enter after each line !!!**
-
-```
-apt-get update
-apt-get upgrade -y
-apt-get install wget nano unrar unzip libboost-all-dev libevent-dev software-properties-common -y
-add-apt-repository ppa:bitcoin/bitcoin -y
-apt-get update
-apt-get install libdb4.8-dev libdb4.8++-dev -y
-```
-
 ### 3. Configure swap to avoid running out of memory:
 
 ```
-fallocate -l 1500M /mnt/1500MB.swap
-dd if=/dev/zero of=/mnt/1500MB.swap bs=1024 count=1572864
-mkswap /mnt/1500MB.swap
-swapon /mnt/1500MB.swap
-chmod 600 /mnt/1500MB.swap
-echo '/mnt/1500MB.swap  none  swap  sw 0  0' >> /etc/fstab
+fallocate -l 2500M /mnt/2500MB.swap
+dd if=/dev/zero of=/mnt/2500MB.swap bs=1024 count=2572864
+mkswap /mnt/2500MB.swap
+swapon /mnt/2500MB.swap
+chmod 600 /mnt/2500MB.swap
+echo '/mnt/2500MB.swap  none  swap  sw 0  0' >> /etc/fstab
 ```
 
 ### 4. Allow the MasterNode p2p communication port through the OS firewall:
@@ -193,7 +179,6 @@ ufw --force enable
 If you are running the MasterNode server in Amazon AWS or another place where additional firewalls are in place, you need to allow incoming connections on port 5500/TCP
 
 
-
 ### 5. Install the Shekel CLI wallet. Always download the latest [release available](https://github.com/shekeltechnologies/JewNew/releases), unpack it
 
 If you are already running a `shekeld` on your server and want to upgrade it, stop the current one with:
@@ -205,29 +190,9 @@ Run the following command until the shekeld process disappears.
 ps aux | grep shekeld | grep -v grep
 ```
 
-
-For **Ubuntu 14.04**
-
+Download and unpack the binaries in the PATH:
 ```
-apt-get install libzmq3 libminiupnpc-dev -y
-wget https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-linux-1.3.0.zip
-unzip shekel-linux-1.3.0.zip
-rm shekel-linux-1.3.0.zip
-chmod +x shekel-cli shekeld
-mv shekel-cli shekeld /usr/local/bin/
-shekeld
-```
-
-For **Ubuntu 16.04***
-
-```
-apt-get install libzmq3-dev libminiupnpc-dev -y
-wget https://github.com/shekeltechnologies/JewNew/releases/download/1.3.0.0/shekel-Ubuntu16.04-1.3.0.zip
-unzip shekel-Ubuntu16.04-1.3.0.zip
-rm shekel-Ubuntu16.04-1.3.0.zip
-chmod +x shekel-cli shekeld
-mv shekel-cli shekeld /usr/local/bin/
-cd ..
+wget -qO- https://github.com/shekeltechnologies/JewNew/releases/download/1.4.0/shekel-1.4.0-x86_64-linux.tar.gz | sudo tar xvz -C /usr/local/bin/
 shekeld
 ```
 
